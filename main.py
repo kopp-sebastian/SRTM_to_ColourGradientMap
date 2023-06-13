@@ -21,7 +21,8 @@ def process_srtm(file):
 
 
 def main():
-    srtm_files = ["srtm_39_02.asc", "srtm_39_03.asc", "srtm_40_02.asc", "srtm_40_03.asc", "srtm_38_02.asc", "srtm_38_03.asc"]
+    # PUT YOUR FILES HERE
+    srtm_files = ["srtm_39_02.asc", "srtm_39_03.asc"]
 
     with concurrent.futures.ProcessPoolExecutor() as executor:
         results = list(executor.map(process_srtm, srtm_files))
